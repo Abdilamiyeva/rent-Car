@@ -2,6 +2,10 @@
     border: 1px solid rgba(195, 212, 233, 0.40);
     background: #FFF;
     padding: 40px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+   
 }
 .navbar__wrapper{
     display: flex;
