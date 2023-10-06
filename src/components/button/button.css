@@ -1,0 +1,23 @@
+
+button{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    padding:10px 20px;
+    border:none;
+    border-radius: 4px;
+    background:  #3563E9;
+    color:  #FFF;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.32px;
+    transition: all 0.8s ease-in-out;
+}

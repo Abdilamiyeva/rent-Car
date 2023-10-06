@@ -1,0 +1,136 @@
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+
+}
+.card__list{
+    max-width: 304px;
+    padding: 24px;
+    border-radius: 10px;
+    background: var(--primary-0, #FFF);
+}
+.card__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 64px;
+}
+.card__top .card__liked{
+    position: absolute;
+    right:-20px;
+    top: -10px;
+}
+.card__top .status{
+    color: var(--secondary-500, #1A202C);
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.6px;
+}
+.card__top .title{
+    color: var(--secondary-300, #90A3BF);
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.28px;
+}
+.like{
+    color: red;
+}
+.dontLike{
+    color:#90A3BF;
+}
+.card__liked{
+    border: none;
+    outline: none;
+    background:  none;
+}
+
+
+.card__center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 64px;
+    margin-bottom: 24px;
+}
+.card__center .petrol, .manual, .number__people{
+    display: flex;
+    gap: 6px;
+}
+.card__center .petrol p , .manual p,.number__people p {
+    color: var(--secondary-300, #90A3BF);
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+    letter-spacing: -0.28px;
+}
+.card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__bottom .price .new__price {
+    color: var(--secondary-500, #1A202C);
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card__bottom .price .new__price span{
+    color: var(--secondary-300, #90A3BF);
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.price .old__price {
+    color: var(--secondary-300, #90A3BF);
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: line-through;
+}
+.cards__title__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cards__title {
+    color: var(--secondary-300, #90A3BF);
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;    
+    margin-top: 42px;
+    margin-bottom: 30px;
+}
+.cards__title__wrapper a {
+    text-decoration: none;
+    color: var(--primary-500, #3563E9);
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

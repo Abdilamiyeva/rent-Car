@@ -1,0 +1,282 @@
+.filter_section{
+  gap: 22px;
+}
+.filter_section .filter_box {
+  padding: 24px 48px 28px 48px;
+  border-radius: 10px;
+  background: #fff;
+  gap: 16px;
+  color: black;
+  min-width: 582px;
+  
+
+}
+
+.filter_section .filter_box .chooseFilter label {
+  gap: 8px;
+  color: #1a202c;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+  cursor: pointer;
+}
+
+.filter_section .filter_box .filterOptions .filterOption {
+  gap: 8px;
+  align-items: flex-start;
+}
+.filter_section .filter_box .filterOptions .filterOption h1 {
+  color: #1a202c;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+  margin-left: 4px;
+}
+
+.filter_section .filter_box .filterOptions .filterOption select {
+  border: none;
+  outline: none;
+  color: #90a3bf;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  cursor: pointer;
+}
+.chooseFilterPick{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.gorizontal_line {
+  width: 1px;
+  height: 48px;
+  background: rgba(195, 212, 233, 0.4);
+}
+
+.filter_section .filter_change button {
+  padding: 18px;
+  border-radius: 10px;
+  background: #3563e9;
+  box-shadow: 0 0 10px #1a202c75;
+}
+
+@media (max-width: 1440px) {
+  .filter_section .filter_box {
+    padding: 20px 40px 20px 40px;
+    border-radius: 10px;
+    background: #fff;
+    gap: 16px;
+    color: black;
+    min-width: max-content;
+  }
+}
+
+@media (max-width: 1240px) {
+  .filter_section.d-jus {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .filter_section .filter_box {
+    padding: 20px 40px 20px 40px;
+    border-radius: 10px;
+    background: #fff;
+    gap: 16px;
+    color: black;
+    width: 100%;
+    text-align: center;
+  }  
+
+  .filter_section .filter_box .chooseFilter label {
+    font-size: 24px;
+    line-height: 150%; 
+  }
+
+  .filter_section .filter_box .chooseFilter {
+    margin: 0 auto;
+  }
+
+  .filter_section .filter_box .filterOptions .filterOption h1 {
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .filter_section .filter_box .filterOptions.d-jus{
+    justify-content: space-around;
+  }
+  
+  .filter_section .filter_box .filterOptions .filterOption select {
+    font-size: 18px;
+  }
+
+  .filter_section .filter_box {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 968px) {
+  .filter_section.d-jus {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .filter_section .filter_box {
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    gap: 16px;
+    color: black;
+    width: 100%;
+    text-align: center;
+  }  
+
+  .filter_section .filter_box .chooseFilter label {
+    font-size: 24px;
+    line-height: 150%; 
+  }
+
+  .filter_section .filter_box .chooseFilter {
+    margin: 0 auto;
+  }
+
+  .filter_section .filter_box .filterOptions .filterOption h1 {
+    font-size: 17px;
+    line-height: 150%;
+  }
+
+  .filter_section .filter_box .filterOptions.d-jus{
+    justify-content: space-around;
+  }
+  
+  .filter_section .filter_box .filterOptions .filterOption select {
+    font-size: 16px;
+  }
+
+  .filter_section .filter_box .filterOptions .gorizontal_line {
+    display: none;
+  }
+
+  .filter_section .filter_box {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .filter_section.d-jus {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .filter_section .filter_box {
+    padding: 20px 10px;
+    border-radius: 10px;
+    background: #fff;
+    gap: 16px;
+    color: black;
+    width: 100%;
+    text-align: center;
+  }  
+
+  .filter_section .filter_box .chooseFilter label {
+    font-size: 17px;
+    line-height: 150%; 
+  }
+
+  .filter_section .filter_box .chooseFilter {
+    margin: 0 auto;
+  }
+
+  .filter_section .filter_box .filterOptions .filterOption h1 {
+    font-size: 13px;
+    line-height: 150%;
+  }
+
+  .filter_section .filter_box .filterOptions.d-jus{
+    justify-content: space-between;
+  }
+  
+  .filter_section .filter_box .filterOptions .filterOption select {
+    font-size: 12px;
+  }
+
+  .filter_section .filter_box {
+    gap: 24px;
+  }
+
+  .filter_section .filter_change {
+    position: relative;
+  }
+
+  .filter_section .filter_change button {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .filter_section.d-jus {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .filter_section .filter_box {
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    gap: 14px;
+    color: black;
+    width: 100%;
+    text-align: center;
+  }  
+
+  .filter_section .filter_box .chooseFilter label {
+    font-size: 14px;
+    line-height: 150%; 
+  }
+
+  .filter_section .filter_box .chooseFilter {
+    margin: 0 auto;
+  }
+
+  .filter_section .filter_box .filterOptions .filterOption h1 {
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .filter_section .filter_box .filterOptions.d-jus{
+    justify-content: space-between;
+  }
+  
+  .filter_section .filter_box .filterOptions .filterOption select {
+    font-size: 10px;
+    width: 80px;
+  }
+
+  .filter_section .filter_box {
+    gap: 15px;
+  }
+
+  .filter_section .filter_change {
+    position: relative;
+  }
+
+  .filter_section .filter_change button {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}

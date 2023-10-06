@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Plus Jakarta Sans, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  background: #F6F7F9;
+}
+.filterSection__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 1310px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.d-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gap-30{
+  gap: 30px;
+}
+.ads__cards{
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.d-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-jus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.d-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action {
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+.active:active {
+  transform: scale(0.95);
+}
+
+.hover:hover {
+  opacity: 0.8;
+}
+.button__card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  margin-left: 550px;
+}
+
+.button__card p{
+  color: var(--secondary-300, #90A3BF);
+  text-align: right;
+  font-family: Plus Jakarta Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+  margin-left: 200px;
+  letter-spacing: -0.28px;
+}

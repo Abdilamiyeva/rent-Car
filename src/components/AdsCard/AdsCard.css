@@ -1,0 +1,49 @@
+.home__card{
+    border-radius: 10px;
+    padding: 24px;
+    width: 640px;
+    background-image: url('../../assets/Ads-bg-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.6s ease-in-out;
+    height: 360px;
+}
+.home__card:hover{
+    background-image: url(../../assets/Ads2-bg-img.png);
+
+}
+.home__card:hover .home__card__btn{
+    background-color: #54A6FF;
+}
+.home__card__title{
+    color: var(--primary-0, #FFF);
+    font-family: Plus Jakarta Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; 
+    letter-spacing: -0.96px;
+    max-width: 272px;
+    margin-bottom: 12px;
+}
+.card__text{
+    color: #FFF;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+    letter-spacing: -0.32px;
+    max-width: 284px;
+    margin-bottom: 20px;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 406px;
+    margin-left: 107px;
+}
+.home__img img{
+   width: 100%;
+}
