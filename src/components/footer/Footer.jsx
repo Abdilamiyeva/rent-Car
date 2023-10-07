@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.css'
+import './Footer.css'
 function Footer() {
   return (
     <footer className='footer'> 
@@ -13,6 +13,7 @@ function Footer() {
 
                 </div>
                 <div className="footerRight">
+                    <div className="footerRight__link ">
                     <ul className='footerItem'>
                         <h2>About</h2>
                         <li><a href="#">How it works</a></li>
@@ -27,6 +28,7 @@ function Footer() {
                         <li><a href="#">Podcast</a></li>
                         <li><a href="#"> Invite a friend</a></li>
                     </ul>
+                    </div>
                     <ul className='footerItem'>
                         <h2>Socials</h2>
                         <li><a href="#">Socials</a></li>
@@ -40,7 +42,7 @@ function Footer() {
             <div className="footerBootom">
                 <p>©2022 MORENT. All rights reserved</p>
                 <div className='footerBottomRight d-flex gap-60'>
-                    <p>Privacy & Policy</p>
+                    <p className='text1'>Privacy & Policy</p>
                     <p>Terms & Condition</p>
                 </div>
             </div>

@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.6s ease-in-out;
-    height: 360px;
+    height: 380px;
 }
 .home__card:hover{
     background-image: url(../../assets/Ads2-bg-img.png);
@@ -44,6 +44,54 @@
     max-width: 406px;
     margin-left: 107px;
 }
+.home__img{
+    width: 100%;
+}
 .home__img img{
    width: 100%;
+}
+
+@media  (max-width:1200px) {
+    .home__card{
+        width:540px ;
+    }
+    .home__card__title{
+        font-size: 25px;
+    }
+}
+@media  (max-width:1100px) {
+    .home__card{
+        width:540px ;
+        height: 350px;
+    }
+    
+}
+@media (max-width:625px){
+    .home__card{
+        width: 400px;
+        height: 300px;
+    }
+}
+@media (max-width:625px){
+    .home__card{
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media (max-width:418px){
+    .home__card{
+        width: 350px;
+        height: 230px;
+
+    }
+    .home__card__title{
+        font-size: 16px;
+    }
+    .home__card .card__text{
+        font-size: 12px;
+    }
+    .home__card__btn{
+        font-size: 12px;
+    }
 }

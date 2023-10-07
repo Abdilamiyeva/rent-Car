@@ -19,8 +19,7 @@ export default function Card({title, isPopular, carsData, favoriteCars, handleFa
 
       </div>
       <div className='container'>
-        {/* Barcha datani aylanib chiqyapmiz */}
-        <div className="cards">
+        <div className="cards" >
           {popularData.map((car) => {
             return <>
               {car.status.toLowerCase().includes(search.trim().toLowerCase()) ? <div key={car.id} className='card__list'>
@@ -78,7 +77,6 @@ export default function Card({title, isPopular, carsData, favoriteCars, handleFa
       </div>
       <div className='container'>
         
-        {/* Barcha datani aylanib chiqyapmiz */}
         <div className="cards">
           {recomendationData.map((car) => {
             return <>

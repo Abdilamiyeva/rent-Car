@@ -20,14 +20,23 @@ export default function Navbar({ favoriteCars, handleFavorite, handleSearch }) {
     setShowModal(!showModal)
   }
   
+  // Sidebar 
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
 
   return (
     <>
-      {/* Agar showModal == true bo'lsa mana bu '&&' belgidan keyingi kod iwlaydi, ya'ni modal ko'rinadi */}
       {showModal && (
         <Modal toggleModal={toggleModal}>
-          <div className="cards">
-        {favoriteCars.map((car) => (
+          {favoriteCars.length === 0  &&(
+
+            <div className='empty__wrapper'>
+               <i id='shopping__cart' className='fa fa-shopping-cart'></i>
+              <p> Your Cart Is empty </p>
+            </div>
+          )}
+          <div className="cards">  
+          {favoriteCars.map((car) => (
+          
           <div key={car.id}  className='card__list'>
           
             <div className="card__top"> 
@@ -36,10 +45,8 @@ export default function Navbar({ favoriteCars, handleFavorite, handleSearch }) {
                   <p className='title'>{car.title}</p>
                   </div>
 
-                  {/* handleFavoritega bitta carni bervoramiz , button bosilganda, obyekt ketadi */}
                   <button className='card__liked' onClick={() => handleFavorite(car)}>
 
-                    {/* Conditional rendering, Agar favoriteCarsni ichidagi birorta carning idsi hozir bosilgan carning idsi bilan bir xil bo'lib qolsa, like so'zini Likedga o'zgartir, aks holda agar yo'q bo'lsa Liked so'zini Likega o'zgartir, (siz bu yerda iconlarni qo'yasiz) */}
                     {favoriteCars.find((favoriteCar) => favoriteCar.id === car.id)
                       ? 
                       <Favorite className='like'></Favorite>: <Favorite className='dontLike'></Favorite>}
@@ -70,33 +77,72 @@ export default function Navbar({ favoriteCars, handleFavorite, handleSearch }) {
 
           </div>
         ))}
-      </div>
+          </div>
+         
         </Modal>
       )}
+
       {/* Modalni ochish */}
       <div className="navbar">
         <div className="container">
         <div className="navbar__wrapper">
+        <div className="header__bars">
+            <div className={`menu__toggle  ${isOpenMenu && "open"}`} onClick={() =>setIsOpenMenu(!isOpenMenu)}>
+                <div className="bar"></div>
+            </div>
+        </div>
+          <div className={`sidebar  ${isOpenMenu && "open"}` } >
+            <div className="sidebar__wrapper">
+            <div className="navbar__right">
+                <p className='rent__car__menu'>Rent Car Menu </p>
+                
+                <div className=" d-flex">
+                  <button  onClick={toggleModal}><Favorite className={`favourteIcon`}></Favorite></button>
+                  <p className='liked__view'>View purchases</p>
+                </div>
+                <div className="notification__wrapper d-flex">
+                  <div className="notification ">
+                    <Notifications className='icon' ></Notifications>
+                  </div>
+                  <p > Notifications </p>
+                </div>
+                <div className="settings__wrapper d-flex">
+                  <div className="settings">
+                    <Settings></Settings>
+                  </div>
+                  <p> Settings </p>
+                </div>
+                
+              </div>
+             
+            </div>
+          </div>
           <div className="navbar__logo">
             <h4>MORENT</h4>
+            <div className="navbar__search  mobile__search" >
+              <Search className='search'></Search>
+              <input  onChange={(e) => handleSearch(e.target.value)} type="text " placeholder='Search something here'/>
+              <img src={filterImg} alt="" />
           </div>
-          <div className="navbar__search " >
+          </div>
+          <div className="navbar__search nabvar__search__none " >
               <Search className='search'></Search>
               <input  onChange={(e) => handleSearch(e.target.value)} type="text " placeholder='Search something here'/>
               <img src={filterImg} alt="" />
           </div>
           <div className="navbar__right">
-            <button  onClick={toggleModal}><Favorite className={`favourteIcon`}></Favorite></button>
-            <div className="notification">
+            <button className='favourteButton' onClick={toggleModal}><Favorite className={`favourteIcon`}></Favorite></button>
+            <div className="notification notification__none">
               <Notifications ></Notifications>
             </div>
-            <div className="settings">
+            <div className="settings settings__none">
               <Settings></Settings>
             </div>
             <div className="user__img">
               <img src={userImg} alt="user-img" />
             </div>
           </div>
+          
         </div>
         </div>
       </div>

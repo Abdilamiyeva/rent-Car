@@ -14,6 +14,8 @@ import Button from './components/button/Button'
 
 
 
+
+
 export default function App() {
   const [allData, setAllData] = useState(carsData)
   // Search 
@@ -25,26 +27,15 @@ export default function App() {
   };
 
   // Like bosilgan mashinalar, shu stateda saqlanadi, bitta arrayni ichida!
-  const [favoriteCars, setFavoriteCars] = useState([]) // boshlang'ich qiymati bo'sh massiv
+  const [favoriteCars, setFavoriteCars] = useState([]) 
 
   // Like bosilish funksiyasi
   const handleFavorite = (car) => {
-    // Agar favoriteCars steytida like bosilgan car bo'lsa
-    
+
     if (favoriteCars.includes(car)) {
-      // Filter orqali like bosilgan carni o'chirib tawla
-
       const updatedLikedCars = favoriteCars.filter((favoriteCar) => favoriteCar !== car);
-
-      // va o'chirib tashlangandan keyingi yangi datani statega qayta saqla
-
       setFavoriteCars(updatedLikedCars);
     } else {
-
-      // Aks holda, agar like bosilgan car favoriteCarsda bo'lmasa,
-      // o'sha carni statega saqla, bu yerda, destruction qilib olyapmiz agar oldin like bosilgan
-      // carlar bo'lsa, o'shaning orqasidan qo'shiladi
-
       setFavoriteCars([...favoriteCars, car]);
     }
   }
@@ -88,13 +79,14 @@ export default function App() {
         handleFavorite={handleFavorite}
         search ={ search}
       />
-      <div className="container">
+      <div className="container btn__card__wrapper">
       <div className="button__card">
-        <Button>Show more car</Button>
+        <Button >Show more car</Button>
         <p>12 Car</p>
       </div>
       </div>
       <Footer></Footer>
+
     </>
   )
 }

@@ -4,13 +4,16 @@
     padding: 40px 0;
     position: fixed;
     width: 100%;
-    z-index: 9999;
-   
+    z-index: 999;
+    top: 0;
+    left: 0;
 }
 .navbar__wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+
 }
 .navbar__logo{
     color: #3563E9;
@@ -85,7 +88,202 @@
     opacity: 0.8;
     width: 44px;
     height: 44px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* ============== */
+.header__bars{
+    display: none;
+
+}
+
+.menu__toggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.menu__toggle > .bar{
+    position: relative;
+    width: 32px;
+    height: 2px;
+    z-index: 999;
+    background-color:#3563E9;
+}
+.menu__toggle > .bar::before, .menu__toggle > .bar::after{
+    content: "";
+    position: absolute;
+
+    height: 2px;
+    border-radius: 2px;
+    background-color:#3563E9;
+    transition: all .45s ease-in-out;
+    
+}
+.menu__toggle > .bar::before{
+    width: 25px;
+    transform: translateY(-8px);
+    right: 0;
+
+
+}
+.menu__toggle > .bar::after{
+    width: 32px;
+    transform: translateY(8px);
+    left: 0; 
+    
+}
+.menu__toggle.open >.bar{
+    transform: translateX(60px );
+    background: transparent;
+    top: -30px;
+    right: 90px;
+    margin-bottom: 20px;
+}
+.menu__toggle.open > .bar::before {
+    width: 32px;
+    transform: rotate(45deg) translate(26px, -26px);
+}
+.menu__toggle.open > .bar::after {
+
+    transform: rotate(-45deg) translate(26px, 26px);
+}
+.sidebar{
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 990;
+    backdrop-filter: blur(10px);
+    background-color:rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+    transition: all .45s ;
+   
+}
+.sidebar.open{
+    transform: translateX(0);
+}
+.sidebar .sidebar__wrapper  .navbar__right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 80px;
+}
+.navbar__right .rent__car__menu{
+    color: var(--secondary-500, #7997f1);
+    font-family: Plus Jakarta Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; 
+    font-style: italic;
+    margin-left: 10px;
+    letter-spacing: -0.32px;
+}
+.menu__links li a {
+    font-size: 25px;
+    font-family: Plus Jakarta Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; 
+    margin-left: 18px;
+    letter-spacing: -0.32px;
+}
+.sidebar .liked__view,.notification__wrapper p, .settings__wrapper p {
+    font-size: 25px;
+    color: #596780;
+    font-weight: 600;
+    margin-left: 20px;
+    
+}
+
+
+
+@media (max-width:1000px){
+    .navbar__right .notification__none , .settings__none {
+        display: none;
+    }
+    .navbar__search {
+        width: 410px;
+    }
+
+}
+@media (max-width:760px){
+    .navbar__right .favourteButton {
+        display: none;
+    }
+    .navbar__search {
+        width: 350px;
+        padding-right: 10px;
+    }
+    .sidebar{
+        display: flex;
+    }
+    .header__bars{
+        display: block;
+    }
+
+}
+.mobile__search{
+    display: none;
+}
+@media  (max-width:625px) {
+    .navbar__wrapper {
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid red; */
+        align-items: flex-start;
+    }
+    .nabvar__search__none{
+        display: none;
+    }
+    .mobile__search{
+        display: flex;
+        border-radius: 10px;
+        margin-top: 22px;
+    }
+    .user__img{
+  
+        margin-top: 5px;
+    }
+    
+}
+@media  (max-width:534px){
+   
+    .mobile__search{
+        margin-left: -90px;
+        max-width: 300px;
+    }
+} 
+@media  (max-width:418px){
+   
+    .mobile__search{
+        margin-left: -70px;
+        max-width: 300px;
+    }
+    .user__img{
+        width: 30px;
+        margin-top: 10px;
+        margin-left: -20px;
+    }
+    .user__img img{
+        width: 100%;
+    }
+    .navbar__logo h4{
+        font-size: 24px;
+    }
+} 

@@ -76,7 +76,7 @@
     background: #fff;
     gap: 16px;
     color: black;
-    min-width: max-content;
+    min-width:max-content;
   }
 }
 
@@ -229,16 +229,12 @@
   .filter_section.d-jus {
     flex-direction: column;
     gap: 24px;
+    
   }
 
   .filter_section .filter_box {
     padding: 10px;
-    border-radius: 10px;
-    background: #fff;
-    gap: 14px;
-    color: black;
-    width: 100%;
-    text-align: center;
+    width: 360px;
   }  
 
   .filter_section .filter_box .chooseFilter label {
@@ -279,4 +275,13 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1.1);
   }
+}
+
+
+@media (max-width: 400px) {
+
+  .filter_section .filter_box {
+    padding: 10px;
+    width: 335px;
+  }  
 }

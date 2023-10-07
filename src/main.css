@@ -27,8 +27,10 @@ body{
   gap: 30px;
 }
 .ads__cards{
-  margin-top: 32px;
   margin-bottom: 32px;
+  margin-top: 150px;
+
+
 }
 .d-flex {
   display: flex;
@@ -64,13 +66,19 @@ body{
 .hover:hover {
   opacity: 0.8;
 }
+.btn__card__wrapper{
+  display: flex;
+  margin-top: 32px;
+  max-width: 1270px;
+  justify-content:end;
+  align-items: center;
+}
 .button__card{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 64px;
-  margin-bottom: 64px;
-  margin-left: 550px;
+  gap: 400px;
+ 
 }
 
 .button__card p{
@@ -81,6 +89,65 @@ body{
   font-style: normal;
   font-weight: 500;
   line-height: 150%; 
-  margin-left: 200px;
+  flex-wrap: nowrap;
+  /* margin-left: 200px; */
   letter-spacing: -0.28px;
+}
+
+@media (max-width:625px){
+  .ads__cards{
+    margin-top: 220px;
+  }
+}
+@media (max-width:950px) {
+  .ads__cards{
+    flex-direction: column;
+  
+  }
+  
+}
+
+@media  (max-width:860px) {
+  .btn__card__wrapper{
+    display: flex;
+    margin-top: 32px;
+    max-width: 1270px;
+    justify-content:end;
+    align-items: center;
+  }
+  .button__card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 300px;
+   
+  }
+  
+  .button__card p{
+    color: var(--secondary-300, #90A3BF);
+    text-align: right;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+    flex-wrap: nowrap;
+    /* margin-left: 200px; */
+    letter-spacing: -0.28px;
+  }
+}
+@media  (max-width:780px) {
+  .button__card{
+    gap: 200px;
+  }
+}
+@media  (max-width:600px) {
+  .button__card{
+    gap: 100px;
+  }
+}
+@media  (max-width:400px) {
+  .button__card{
+    gap: 50px;
+  }
 }

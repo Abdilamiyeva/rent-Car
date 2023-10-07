@@ -8,6 +8,7 @@ button{
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
+    flex-wrap: nowrap;
     padding:10px 20px;
     border:none;
     border-radius: 4px;
